@@ -3,7 +3,7 @@ const { Schema, model } = require('mongoose')
 const UserSchema = new Schema({
     username : {
         type : String,
-        require : true
+        required : true
     },
     password : {
         type : String,
@@ -11,8 +11,17 @@ const UserSchema = new Schema({
     },
     email : {
         type : String,
-        require : true,
+        required : true,
         unique : true
+    },
+    role : {
+        type : String,
+        required : true,
+        default : "user"
+    },
+    profile : {
+        type : String,
+        default : "http://cdn.onlinewebfonts.com/svg/img_206976.png"
     },
     joining : {
         type : Date,
