@@ -125,6 +125,7 @@ const deleteCategory = async (req, res) => {
     }
 }
 
+
 //Update Category
 const updateCategory = async (req, res) => {
     const { _id, name, image } = req.body
